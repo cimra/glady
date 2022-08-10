@@ -11,6 +11,7 @@ abstract public class Cheque {
 
     private final double amount;
     private final LocalDate receptionDate;
+    protected LocalDate expirationDate;
     private boolean isValid = true;
 
     public Cheque (final double amount, final LocalDate receptionDate) {
