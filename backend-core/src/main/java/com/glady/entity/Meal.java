@@ -10,7 +10,8 @@ public class Meal extends Cheque {
         calculateExpirationDate();
     }
 
-    private void calculateExpirationDate() {
+    @Override
+    void calculateExpirationDate() {
         int currentYear = super.getReceptionDate().getYear();
         LocalDate lastDayOfNextFebruary;
         lastDayOfNextFebruary = LocalDate.of(currentYear + 1, 2, 1).with(TemporalAdjusters.lastDayOfMonth());

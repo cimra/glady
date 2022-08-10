@@ -18,4 +18,6 @@ abstract public class Cheque {
         this.amount = amount;
         this.receptionDate = receptionDate;
     }
+
+    abstract void calculateExpirationDate();
 }
