@@ -8,12 +8,12 @@ import java.time.LocalDate;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class ControlChequesTest {
+public class ControlChequeTest {
 
     @Test
     void gift_becomes_invalid_after_expiration_date() {
         //given
-        ControlCheques service = new ControlCheques();
+        ControlCheque service = new ControlCheque();
         Gift gift = new Gift(100, LocalDate.of(2022, 8, 10));
 
         //when
@@ -27,7 +27,7 @@ public class ControlChequesTest {
     @Test
     void gift_is_still_valid_before_expiration_date() {
         //given
-        ControlCheques service = new ControlCheques();
+        ControlCheque service = new ControlCheque();
         Gift gift = new Gift(100, LocalDate.of(2022, 8, 10));
 
         //when
@@ -41,7 +41,7 @@ public class ControlChequesTest {
     @Test
     void gift_is_still_valid_the_day_of_the_expiration_date() {
         //given
-        ControlCheques service = new ControlCheques();
+        ControlCheque service = new ControlCheque();
         Gift gift = new Gift(100, LocalDate.of(2022, 8, 10));
 
         //when
@@ -55,7 +55,7 @@ public class ControlChequesTest {
     @Test
     void meal_becomes_invalid_after_expiration_date() {
         //given
-        ControlCheques service = new ControlCheques();
+        ControlCheque service = new ControlCheque();
         Meal meal = new Meal(100, LocalDate.of(2022, 8, 10));
 
         //when
@@ -69,7 +69,7 @@ public class ControlChequesTest {
     @Test
     void meal_is_still_valid_before_expiration_date() {
         //given
-        ControlCheques service = new ControlCheques();
+        ControlCheque service = new ControlCheque();
         Meal meal = new Meal(100, LocalDate.of(2022, 8, 10));
 
         //when
@@ -83,7 +83,7 @@ public class ControlChequesTest {
     @Test
     void meal_is_still_valid_the_day_of_the_expiration_date_when_leap_year() {
         //given
-        ControlCheques service = new ControlCheques();
+        ControlCheque service = new ControlCheque();
         Meal meal = new Meal(100, LocalDate.of(2022, 8, 10));
 
         //when
@@ -97,7 +97,7 @@ public class ControlChequesTest {
     @Test
     void meal_is_still_valid_the_day_of_the_expiration_date_when_non_leap_year() {
         //given
-        ControlCheques service = new ControlCheques();
+        ControlCheque service = new ControlCheque();
         Meal meal = new Meal(100, LocalDate.of(2023, 8, 10));
 
         //when
