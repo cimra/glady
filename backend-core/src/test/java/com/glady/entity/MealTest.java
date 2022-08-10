@@ -33,7 +33,7 @@ public class MealTest {
     @Test
     void meal_expiration_date_is_29th_when_leap_year_following_the_reception_date() {
         //given
-        final LocalDate receptionDate = LocalDate.of(2023, 8, 10);
+        final LocalDate receptionDate = LocalDate.of(2023, 1, 10);
         final Meal meal = new Meal(100, receptionDate);
 
         //when
